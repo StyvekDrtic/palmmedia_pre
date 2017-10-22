@@ -123,3 +123,25 @@ img {
 html {
   height: 100vh;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h1 {
+    padding-top: calc((100vh - 130px)/2);
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
