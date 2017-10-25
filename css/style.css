@@ -1,3 +1,21 @@
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  35% {
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+
+  70% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @font-face {
   font-family: "heavy";
   /* deklarace fontu */
@@ -74,7 +92,11 @@ h1 {
   width: calc(100% - 100px);
   margin: 0 auto;
   text-align: center;
-  padding-top: calc((100vh - 108px)/2);
+  padding-top: calc((100vh - 108px - 50px)/2);
+  animation-name: pulse;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 
 span {
@@ -140,8 +162,17 @@ html {
 
 @media screen and (max-width: 380px) {
   h1 {
-    padding-top: calc((100vh - 130px)/2);
+    padding-top: calc((100vh - 130px - 20px)/2);
     font-size: 23px;
     line-height: 37px;
+  }
+}
+
+@media screen and (max-height: 420px) {
+  h1 {
+    font-size: 27px;
+    line-height: 43px;
+    max-width: 400px;
+    padding-top: calc((100vh - 108px)/2);
   }
 }
