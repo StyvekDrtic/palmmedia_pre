@@ -163,7 +163,7 @@ html {
 
 @media screen and (max-width: 380px) {
   h1 {
-    padding-top: calc((100vh - 130px - 20px)/2);
+    padding-top: calc((100vh - 130px - 40px)/2);
     font-size: 23px;
     line-height: 37px;
   }
